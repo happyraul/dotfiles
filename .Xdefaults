@@ -1,0 +1,19 @@
+*foreground: #c5c8c6
+*foreground_bold: #a8a19f
+*cursor: #a8a19f
+*background: #1d1f21
+!!*background: rgba(0, 0, 0, .7)
+
+!! black
+*color0: #282a2e
+
+!! red
+*color1: #a54242
+
+!! blue
+*color4: #5f819d
+
+!! magenta
+*color5: #85678f
+
+
