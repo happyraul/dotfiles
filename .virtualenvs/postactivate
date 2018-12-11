@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+# This hook is sourced after every virtualenv is activated.
+
+project=$(basename $VIRTUAL_ENV)
+cd /home/raul/source/projects/stylight/$project
