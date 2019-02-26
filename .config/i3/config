@@ -107,12 +107,12 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "qt"
+set $ws2 "web"
+set $ws3 "subl"
+set $ws4 "term"
+set $ws5 "comm"
+set $ws6 "music"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -141,6 +141,20 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# assign applications to their workspaces
+assign [class="qutebrowser"] $ws1
+assign [class="Firefox"] $ws2
+assign [class="Sublime"] $ws3
+#assign [class="st"] $ws4
+assign [class="Franz"] $ws5
+
+# assign workspaces to outputs
+workspace $ws1 output DP2-2
+workspace $ws2 output DP2-2
+workspace $ws3 output DP2-2
+workspace $ws4 output DP2-3-8
+workspace $ws5 output eDP1
 
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+backslash workspace back_and_forth
@@ -203,7 +217,6 @@ bar {
     font pango:monospace 14
     position top
     tray_output eDP1
-    separator_symbol " | "
 }
 
 # bar toggle, hide or show
