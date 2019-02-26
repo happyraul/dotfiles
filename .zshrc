@@ -112,6 +112,11 @@ if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   startx
 fi
 
+ci() {
+  project=${PWD##*/}
+  firefox "https://circleci.com/gh/stylight/workflows/$project"
+}
+
 alias vpn="sudo openvpn /etc/openvpn/client/stylight.conf"
 alias lock="i3lock --image ~/Dropbox/Photos/bianchi.png"
 alias kb="xset r rate 200 50"
@@ -122,4 +127,5 @@ export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 export PATH=$HOME/.local/bin:$PATH
+export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 
