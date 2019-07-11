@@ -1,0 +1,9 @@
+{
+    "anaconda_linter_mark_style": "outline",
+    "enable_docstrings_tooltip": false,
+    "enable_signatures_tooltip": false,
+    "python_interpreter": "/usr/bin/python",
+    "pep8_ignore": ["E731"],
+    "anaconda_gutter_theme": "hard",
+    "mypy": true
+}

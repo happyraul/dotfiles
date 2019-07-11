@@ -1,0 +1,17 @@
+// These settings override both User and Default settings for the Python syntax
+{
+	"auto_indent": true,
+	"rulers": [79],
+	"smart_indent": true,
+	"tab_size": 4,
+	"trim_automatic_whitespace": true,
+	"use_tab_stops": true,
+	"word_wrap": false,
+	"wrap_width": 80,
+	"color_scheme": "Packages/Perv - Color Scheme/Perv Orange.tmTheme",
+
+	"auto_complete_triggers": [{
+		"selector": "source.python - string - comment - constant.numeric",
+		"characters": "."
+	}]
+}
