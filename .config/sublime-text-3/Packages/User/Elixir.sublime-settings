@@ -1,4 +1,4 @@
-// These settings override both User and Default settings for the Python syntax
+// These settings override both User and Default settings for the Elixir syntax
 {
     "auto_indent": true,
     "rulers": [79],
