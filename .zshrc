@@ -114,13 +114,14 @@ fi
 
 ci() {
   project=${PWD##*/}
-  firefox "https://circleci.com/gh/stylight/workflows/$project"
+  firefox "https://app.circleci.com/pipelines/github/stylight/$project"
 }
 
 alias vpn="sudo openvpn /etc/openvpn/client/stylight.conf"
 alias lock="i3lock --image ~/Dropbox/Photos/bianchi.png"
 alias kb="xset r rate 200 50"
 alias sty="cd ~/source/projects/stylight"
+alias per="cd ~/source/projects/personal"
 alias cg='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 export WORKON_HOME=~/.virtualenvs
