@@ -4,6 +4,7 @@
     "rulers": [79],
     "smart_indent": true,
     "tab_size": 2,
+    "detect_indentation": false,
     "trim_automatic_whitespace": true,
     "use_tab_stops": true,
     "word_wrap": false,
