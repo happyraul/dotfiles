@@ -62,6 +62,8 @@ alias gra='git remote add'
 alias grv='git remote -v'
 alias gst='git status'
 
+source /usr/bin/virtualenvwrapper.sh
+
 ci() {
   project=${PWD##*/}
   surf "https://app.circleci.com/pipelines/github/stylight/$project"
