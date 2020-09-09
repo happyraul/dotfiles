@@ -52,5 +52,5 @@ fi
 xset r rate 200 50
 
 eval $(ssh-agent)
-exec i3
+exec $HOME/.local/bin/startdwm
 
