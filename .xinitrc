@@ -52,5 +52,6 @@ fi
 xset r rate 200 50
 
 eval $(ssh-agent)
+picom -b
 exec $HOME/.local/bin/startdwm
 
