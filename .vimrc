@@ -47,11 +47,11 @@ augroup stripWhitespace
 "    autocmd BufWritePre *.exs %s/\s\+$//e
 augroup END
 
-augroup elixirFormat
-    autocmd!
-    autocmd BufWritePost *.ex silent !mix format mix.exs <afile>
-    autocmd BufWritePost *.exs silent !mix format mix.exs <afile>
-augroup END
+"augroup elixirFormat
+"    autocmd!
+"    autocmd BufWritePost *.ex silent !mix format mix.exs <afile>
+"    autocmd BufWritePost *.exs silent !mix format mix.exs <afile>
+"augroup END
 
 augroup elmFormat
     autocmd!
