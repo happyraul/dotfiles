@@ -2,13 +2,13 @@
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=10000
-setopt autocd
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/raul/.zshrc'
 
 # End of lines added by compinstall
+source ~/.zsh/zsh.sh
 
 fpath=("$HOME/.zprompts" "$fpath[@]")
 autoload -Uz compinit promptinit
