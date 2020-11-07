@@ -25,27 +25,21 @@ bindkey '^S' history-incremental-search-forward
 export EDITOR='vim'
 export BROWSER='firefox'
 export WORKON_HOME='~/.virtualenvs'
+export WOW="$HOME/Games/world-of-warcraft-classic/drive_c/Program Files (x86)/World of Warcraft/_classic_"
 
 # store pass as selection
 export PASSWORD_STORE_X_SELECTION=primary
 
 # aliases
 
+alias vpn='sudo openvpn /etc/openvpn/client/stylight.conf'
+
 # manage
 alias ez='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
 
 alias cg='git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-
-# directory
-alias ...='cd ../../'
-alias l='ls -lah'
-alias la='ls -lAh'
-alias ll='ls -lh'
-alias ls='ls --color=tty'
-alias lsa='ls -lah'
-alias md='mkdir -p'
-alias rd='rmdir'
+alias wg='git --git-dir=$HOME/.wow/ --work-tree=$WOW'
 
 # git
 alias g='git'
