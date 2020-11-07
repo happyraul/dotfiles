@@ -55,13 +55,16 @@ alias glg='glola'
 alias gra='git remote add'
 alias grv='git remote -v'
 alias gst='git status'
+alias grb='git fetch && git rebase origin/master'
 
 source /usr/bin/virtualenvwrapper.sh
 
 ci() {
   project=${PWD##*/}
-  surf "https://app.circleci.com/pipelines/github/stylight/$project"
+  surf "https://app.circleci.com/pipelines/github/stylight/$project" > /dev/null 2>&1 &
 }
+
+export AMD_DEBUG='nodma'
 
 if [[ ! $DISPLAY ]]; then
   startx
