@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# red/black
+fgcolor="#a54242"
+bgcolor="#373b41"
+
+runtabbed() {
+	tabbed -dcn tabbed-st \
+        -t "$fgcolor" -u "$bgcolor" -r 2 \
+        st -w '' -f "mono:size=16" 2>/dev/null &
+}
+runtabbed
+
