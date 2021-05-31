@@ -48,9 +48,9 @@ augroup stripWhitespace
 augroup END
 
 "augroup elixirFormat
-"    autocmd!
-"    autocmd BufWritePost *.ex silent !mix format mix.exs <afile>
-"    autocmd BufWritePost *.exs silent !mix format mix.exs <afile>
+    "autocmd!
+    "autocmd BufWritePre *.ex silent !mix format mix.exs <afile>
+    "autocmd BufWritePre *.exs silent !mix format mix.exs <afile>
 "augroup END
 
 augroup elmFormat
@@ -62,3 +62,6 @@ augroup END
 
 set list lcs=trail:·,tab:»·
 
+" whitespace settings
+autocmd FileType c setlocal autoindent noexpandtab shiftwidth=2 tabstop=8 softtabstop=2
+autocmd FileType elixir setlocal autoindent shiftwidth=2 tabstop=2 softtabstop=2

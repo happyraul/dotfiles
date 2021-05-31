@@ -1,8 +1,5 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=100000
-SAVEHIST=10000
-bindkey -v
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/raul/.zshrc'
@@ -18,7 +15,7 @@ promptinit
 prompt raul
 
 # enable reverse/forward search
-bindkey '^R' history-incremental-search-backward
+#bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 
 # env
@@ -64,7 +61,7 @@ ci() {
   surf "https://app.circleci.com/pipelines/github/stylight/$project" > /dev/null 2>&1 &
 }
 
-export AMD_DEBUG='nodma'
+alias threema='surf "https://web.threema.ch/" > /dev/null 2>&1 &'
 
 if [[ ! $DISPLAY ]]; then
   startx
