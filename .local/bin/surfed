@@ -2,7 +2,14 @@
 
 xidfile="$HOME/tmp/tabbed-surf.xid"
 uri=""
-fgcolor="#a54242"
+
+# red
+# fgcolor="#a54242"
+
+# blue
+fgcolor="#005577"
+
+# black
 bgcolor="#373b41"
 
 if [ "$#" -gt 0 ];
@@ -11,7 +18,9 @@ then
 fi
 
 runtabbed() {
-	tabbed -dcn tabbed-surf -t "$fgcolor" -u "$bgcolor" -r 2 surf -e '' "$uri" >"$xidfile" 2>/dev/null &
+	tabbed -dcn tabbed-surf \
+        -t "$fgcolor" -u "$bgcolor" -r 2 \
+        surf -e '' "$uri" >"$xidfile" 2>/dev/null &
 }
 
 if [ ! -r "$xidfile" ];

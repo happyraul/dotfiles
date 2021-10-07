@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+set -x
 
 if [ -f ~/.aws/role.config ]; then
     . ~/.aws/role.config

@@ -1,7 +1,12 @@
 #!/bin/sh
 
-# red/black
-fgcolor="#a54242"
+# red
+# fgcolor="#a54242"
+
+# blue
+fgcolor="#005577"
+
+# black
 bgcolor="#373b41"
 
 runtabbed() {

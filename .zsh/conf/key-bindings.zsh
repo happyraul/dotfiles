@@ -65,4 +65,5 @@ if [[ -n "${terminfo[kend]}" ]]; then
 fi
 
 bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
-
+# fixme: why can't this one work?
+#bindkey '^s' history-incremental-search-forward
