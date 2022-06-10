@@ -12,7 +12,7 @@ bgcolor="#373b41"
 runtabbed() {
 	tabbed -dcn tabbed-st \
         -t "$fgcolor" -u "$bgcolor" -r 2 \
-        st -w '' -f "mono:size=12" 2>/dev/null &
+        st -w '' -f "Roboto Mono Light:size=10" 2>/dev/null &
 }
 runtabbed
 

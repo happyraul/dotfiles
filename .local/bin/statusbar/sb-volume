@@ -1,0 +1,9 @@
+#!/bin/sh
+
+status="$(amixer get Master | grep '%' | awk '{print $6}' | sed -E 's/\[(.*)\]/\1/')"
+
+if [ "$status" == "on" ]; then
+    amixer get Master | grep '%' | awk '{print $4}' | sed -E 's/\[(.*)\]/🔉\1/'
+else
+    echo 🔇
+fi

@@ -1,3 +1,5 @@
+filetype plugin on
+
 set relativenumber "Relative line numbers
 set autoread "Reload modified files automatically
 set number
@@ -6,6 +8,9 @@ set shiftwidth=4 "Indenting is 4 spaces, not 8
 set softtabstop=4 "Number of spaces inserted when inputting tab
 set tabstop=4
 set colorcolumn=88,100
+set scrolloff=5 "Start scrolling when cursor is 5 lines from top/bottom
+set sidescrolloff=5
+set splitright
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 let g:netrw_banner = 0 "No header spam in directory mode
@@ -37,10 +42,13 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-inoremap jk <esc>
+"inoremap jk <esc>
 
 " surround selection in ()
 xnoremap <leader>s xi()<esc>P
+
+" insert trailing something
+imap ,, <Esc>A,<Esc>
 
 iabbrev im import
 iabbrev tehn then
@@ -73,11 +81,24 @@ set list lcs=trail:·,tab:»·
 " whitespace settings
 autocmd FileType c setlocal autoindent noexpandtab shiftwidth=2 tabstop=8 softtabstop=2
 autocmd FileType elixir setlocal autoindent shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType tf setlocal autoindent shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType terraform setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+" Format python files with black on save
 autocmd BufWritePre *.py execute ':Black'
 
-"colorscheme badwolf
+" Run pylint
+"set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+"set errorformat=%f:%l:\ %m
+"autocmd BufWritePost *.py make
+
+" Format terraform files on save
+let g:terraform_fmt_on_save=1
+
+" almost black
+let g:alduin_Shout_Dragon_Aspect = 1
+" black
+"let g:alduin_Shout_Become_Ethereal = 1
+colorscheme alduin
 "set background=dark
 
 command! -range=% Isort :<line1>,<line2>! isort -
