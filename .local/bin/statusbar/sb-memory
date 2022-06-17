@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while IFS=':k ' read -r key val _ ; do
+    case $key in
+        MemTotal|Shmem) used=$((used + val)) ;;
+        MemFree|Buffers|Cached|SReclaimable) used=$((used - val))
+    esac
+done < /proc/meminfo
+
+printf ' %s' "$(printf '%s\n' "$((used * 1024))" | human)"

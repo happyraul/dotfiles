@@ -1,0 +1,41 @@
+#!/bin/sh
+
+if [ -e /sys/class/power_supply/AC ] ; then
+    ac_path=/sys/class/power_supply/AC
+fi
+
+if [ ! "$ac_path" ] ; then
+    if [ -e /sys/class/power_supply/ucsi-source-psy-USBC000:002 ] ; then
+        ac_path=/sys/class/power_supply/ucsi-source-psy-USBC000:002
+    fi
+fi
+
+read -r p < /sys/class/power_supply/BAT0/capacity
+read -r s < "$ac_path"/online
+
+case $s in
+    1)
+        e=''
+        ;;
+    0)
+        #case ${p%} in
+        case $((p / 10)) in
+            [8-9]|10)
+                e=' '
+                ;;
+            [6-7])
+                e=' '
+                ;;
+            [3-5])
+                e=' '
+                ;;
+            [1-2])
+                e=' '
+                ;;
+            *)
+                e=' '
+        esac
+esac
+
+printf "%s %s%%" "$e" "$p"
+
